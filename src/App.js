@@ -1,23 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
+import ContentstackUIExtension from '@contentstack/ui-extensions-sdk';
+
+import { Button, Select } from '@contentstack/venus-components';
 
 function App() {
+  const [error, setError] = useState(null);
+  const [extension, setExtension] = useState(null);
+
+  useEffect(() => {
+    // eslint-disable-next-line no-restricted-globals
+    if (self === top) {
+      setError({ message: 'This extension can only be used in the Contentstack' });
+    } else {
+      ContentstackUIExtension.init().then(extension => {
+        setExtension(extension);
+        console.log('Extension initialized', extension);
+      });
+    }
+  }, []);
+
+  if (error) {
+    return <p>Error: {error.message}</p>
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Button>Hello World</Button>
+
+      <Select
+        selectLabel="Select a field"
+        onChange={e => {
+          console.log(e);
+        }}
+        options={[
+          {
+            id: 0,
+            label: 'Option 1',
+            searchableLabel: 'ssssOption 1',
+            value: 1
+          },
+          {
+            id: 1,
+            label: 'Option 2',
+            searchableLabel: 'ssssOption 2',
+            value: 2
+          },
+          {
+            id: 2,
+            label: 'Option 3',
+            searchableLabel: 'ssssOption 3',
+            value: 3
+          }
+        ]}
+        value={null}
+      />
     </div>
   );
 }
