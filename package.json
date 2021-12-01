@@ -5,6 +5,7 @@
   "packageManager": "yarn@3.1.1",
   "dependencies": {
     "@contentstack/ui-extensions-sdk": "^2.2.0",
+    "@contentstack/utils": "^1.1.0",
     "@contentstack/venus-components": "^1.0.0",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",

@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@contentstack/ui-extensions-sdk", "npm:2.2.0"],
+            ["@contentstack/utils", "npm:1.1.0"],
             ["@contentstack/venus-components", "virtual:64d7012b48f73525ba45a971872033f4c20713dc6867561b60dc9130d29249dde6dad95b316c2106c23c5bfd6b8f8a5a1cdb38e824b2ee9de7d2fcfd04f8dcea#npm:1.0.0"],
             ["@testing-library/jest-dom", "npm:5.15.1"],
             ["@testing-library/react", "virtual:64d7012b48f73525ba45a971872033f4c20713dc6867561b60dc9130d29249dde6dad95b316c2106c23c5bfd6b8f8a5a1cdb38e824b2ee9de7d2fcfd04f8dcea#npm:11.2.7"],
@@ -4793,6 +4794,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@contentstack/ui-extensions-sdk", "npm:2.2.0"],
             ["post-robot", "npm:8.0.29"],
             ["wolfy87-eventemitter", "npm:5.2.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@contentstack/utils", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/@contentstack-utils-npm-1.1.0-30d2de2964-b4ff78a910.zip/node_modules/@contentstack/utils/",
+          "packageDependencies": [
+            ["@contentstack/utils", "npm:1.1.0"],
+            ["node-html-parser", "npm:1.4.9"]
           ],
           "linkType": "HARD",
         }]
@@ -11116,6 +11127,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["cs-ui-ext-language-compare", "workspace:."],
             ["@contentstack/ui-extensions-sdk", "npm:2.2.0"],
+            ["@contentstack/utils", "npm:1.1.0"],
             ["@contentstack/venus-components", "virtual:64d7012b48f73525ba45a971872033f4c20713dc6867561b60dc9130d29249dde6dad95b316c2106c23c5bfd6b8f8a5a1cdb38e824b2ee9de7d2fcfd04f8dcea#npm:1.0.0"],
             ["@testing-library/jest-dom", "npm:5.15.1"],
             ["@testing-library/react", "virtual:64d7012b48f73525ba45a971872033f4c20713dc6867561b60dc9130d29249dde6dad95b316c2106c23c5bfd6b8f8a5a1cdb38e824b2ee9de7d2fcfd04f8dcea#npm:11.2.7"],
@@ -18898,6 +18910,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["semver", "npm:7.3.5"],
             ["tar", "npm:6.1.11"],
             ["which", "npm:2.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["node-html-parser", [
+        ["npm:1.4.9", {
+          "packageLocation": "./.yarn/cache/node-html-parser-npm-1.4.9-267030a0e0-fbcf5ea22f.zip/node_modules/node-html-parser/",
+          "packageDependencies": [
+            ["node-html-parser", "npm:1.4.9"],
+            ["he", "npm:1.2.0"]
           ],
           "linkType": "HARD",
         }]

@@ -1,0 +1,18 @@
+.output {
+    margin: 5px 10px;
+    color: #475161;
+    font-family: 'Inter';
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.output p {
+    padding: 3px 0
+}
+
+.output p.message {
+    color: #647696;
+    font-size: .75rem;
+    font-style: italic;
+}

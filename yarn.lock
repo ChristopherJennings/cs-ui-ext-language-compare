@@ -1897,6 +1897,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@contentstack/utils@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@contentstack/utils@npm:1.1.0"
+  dependencies:
+    node-html-parser: ^1.4.2
+  checksum: b4ff78a910645d02ca556f5ff37eb3cd0438bfe6b52f96eea178d044b56dcaf620eb9bf949bb1bb89c190e8bb0a33c77c04019b47e2f4aa86f754bb659c37364
+  languageName: node
+  linkType: hard
+
 "@contentstack/venus-components@npm:^1.0.0":
   version: 1.0.0
   resolution: "@contentstack/venus-components@npm:1.0.0"
@@ -6916,6 +6925,7 @@ __metadata:
   resolution: "cs-ui-ext-language-compare@workspace:."
   dependencies:
     "@contentstack/ui-extensions-sdk": ^2.2.0
+    "@contentstack/utils": ^1.1.0
     "@contentstack/venus-components": ^1.0.0
     "@testing-library/jest-dom": ^5.15.1
     "@testing-library/react": ^11.2.7
@@ -10051,7 +10061,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"he@npm:^1.2.0":
+"he@npm:1.2.0, he@npm:^1.2.0":
   version: 1.2.0
   resolution: "he@npm:1.2.0"
   bin:
@@ -13690,6 +13700,15 @@ __metadata:
   bin:
     node-gyp: bin/node-gyp.js
   checksum: 341710b5da39d3660e6a886b37e210d33f8282047405c2e62c277bcc744c7552c5b8b972ebc3a7d5c2813794e60cc48c3ebd142c46d6e0321db4db6c92dd0355
+  languageName: node
+  linkType: hard
+
+"node-html-parser@npm:^1.4.2":
+  version: 1.4.9
+  resolution: "node-html-parser@npm:1.4.9"
+  dependencies:
+    he: 1.2.0
+  checksum: fbcf5ea22f266b36a4761d448d3db7bcee6d7570e3a8ec38cbde223fe3d705cda1df8c287907520ae2d6bac8f68ef4dacdb5fd76c375c13c50bc746e980f4a91
   languageName: node
   linkType: hard
 
