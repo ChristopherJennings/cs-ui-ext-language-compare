@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import ContentstackUIExtension from '@contentstack/ui-extensions-sdk';
 import './App.css'
-import { jsonToHtml} from '@contentstack/json-rte-serializer'
+import * as Utils from '@contentstack/utils'
 import { InstructionText, Select, FieldLabel } from '@contentstack/venus-components';
 
 function App() {
@@ -122,7 +122,8 @@ function App() {
               if (Array.isArray(value)) {
                 return `<ul>${value.map((v, i) => `<li>${v}</li>`).join('')}</ul>`
               } else {
-                return jsonToHtml(value)
+                Utils.jsonToHTML({entry, paths: [selectedField.value]})
+                return entry[selectedField.value]
               }
             default:
               return typeof value
