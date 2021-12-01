@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import ContentstackUIExtension from '@contentstack/ui-extensions-sdk';
 import './App.css'
-import * as Contentstack from '@contentstack/utils'
+import { jsonToHtml} from '@contentstack/json-rte-serializer'
 import { InstructionText, Select, FieldLabel } from '@contentstack/venus-components';
 
 function App() {
@@ -61,7 +61,7 @@ function App() {
             const isText = f.data_type === `text`
             const isJsonRte = f.data_type === `json` && f.field_metadata.allow_json_rte === true
 
-            return isText // || isJsonRte
+            return isText || isJsonRte
           })
           .map((f, i) => ({
             id: i,
@@ -122,9 +122,7 @@ function App() {
               if (Array.isArray(value)) {
                 return `<ul>${value.map((v, i) => `<li>${v}</li>`).join('')}</ul>`
               } else {
-                console.log(Contentstack)
-                Contentstack.render(entry)
-                return JSON.stringify(entry)
+                return jsonToHtml(value)
               }
             default:
               return typeof value

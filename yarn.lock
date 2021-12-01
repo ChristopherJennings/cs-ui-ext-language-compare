@@ -1887,6 +1887,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@contentstack/json-rte-serializer@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@contentstack/json-rte-serializer@npm:1.0.1"
+  dependencies:
+    array-flat-polyfill: ^1.0.1
+    lodash: ^4.17.21
+    slate: ^0.63.0
+    slate-hyperscript: ^0.62.0
+    url-regex-safe: ^2.0.2
+    uuid: ^8.3.2
+  checksum: 1b824870cacea34fb2dfcc843cecdbeb96bab29dbce21b6943f407b371910e1c50f8add6b67ae5c94746158beeeb04bd223622ec54d141d299f6d84fc7f5d44d
+  languageName: node
+  linkType: hard
+
 "@contentstack/ui-extensions-sdk@npm:^2.2.0":
   version: 2.2.0
   resolution: "@contentstack/ui-extensions-sdk@npm:2.2.0"
@@ -1894,15 +1908,6 @@ __metadata:
     post-robot: 8.0.29
     wolfy87-eventemitter: 5.2.4
   checksum: b9e6d432ad6bcd4720d03f9798d7f1c0ca1dd2b7ed03102abb3ad4f817a5a2d8047977f4e1d1563f610f5f9265c60b0d0089b572ba17206fec7c4b7b3d1641ff
-  languageName: node
-  linkType: hard
-
-"@contentstack/utils@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@contentstack/utils@npm:1.1.0"
-  dependencies:
-    node-html-parser: ^1.4.2
-  checksum: b4ff78a910645d02ca556f5ff37eb3cd0438bfe6b52f96eea178d044b56dcaf620eb9bf949bb1bb89c190e8bb0a33c77c04019b47e2f4aa86f754bb659c37364
   languageName: node
   linkType: hard
 
@@ -4727,6 +4732,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"array-flat-polyfill@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "array-flat-polyfill@npm:1.0.1"
+  checksum: 5d578b191a7f145a1351a4962df9a14d905060c7dfcd8f85062954b7a44b2bff1c9d2bff2d56b07756de774d5e9e4feafe4572f5641b1e9c8a968aca5cbe4902
+  languageName: node
+  linkType: hard
+
 "array-flatten@npm:1.1.1":
   version: 1.1.1
   resolution: "array-flatten@npm:1.1.1"
@@ -6924,8 +6936,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cs-ui-ext-language-compare@workspace:."
   dependencies:
+    "@contentstack/json-rte-serializer": ^1.0.1
     "@contentstack/ui-extensions-sdk": ^2.2.0
-    "@contentstack/utils": ^1.1.0
     "@contentstack/venus-components": ^1.0.0
     "@testing-library/jest-dom": ^5.15.1
     "@testing-library/react": ^11.2.7
@@ -10061,7 +10073,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"he@npm:1.2.0, he@npm:^1.2.0":
+"he@npm:^1.2.0":
   version: 1.2.0
   resolution: "he@npm:1.2.0"
   bin:
@@ -10506,6 +10518,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"immer@npm:^8.0.1":
+  version: 8.0.4
+  resolution: "immer@npm:8.0.4"
+  checksum: 9d3b28df1ac5bf6918c611e71c15bdb136588c21a3431100448f21325fef9b055cc9a44fe8b023f0c5ecbc66a2ba38f403c9a67d581f613b49d0e4ff15564f79
+  languageName: node
+  linkType: hard
+
 "immutable@npm:^4.0.0, immutable@npm:^4.0.0-rc.9":
   version: 4.0.0
   resolution: "immutable@npm:4.0.0"
@@ -10698,6 +10717,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"install-artifact-from-github@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "install-artifact-from-github@npm:1.2.0"
+  bin:
+    install-from-cache: bin/install-from-cache.js
+    save-to-github-cache: bin/save-to-github-cache.js
+  checksum: 030c4fbb42c1b1adeb463d88c554e1fbd68929b005f78401ea6a2ca34e24444e522c9d3b6cdf75b0dd54ef8861c0c8975791188c0771b9e2b227b6349ef8bd53
+  languageName: node
+  linkType: hard
+
 "internal-ip@npm:^4.3.0":
   version: 4.3.0
   resolution: "internal-ip@npm:4.3.0"
@@ -10746,6 +10775,13 @@ __metadata:
   version: 2.1.0
   resolution: "ip-regex@npm:2.1.0"
   checksum: 331d95052aa53ce245745ea0fc3a6a1e2e3c8d6da65fa8ea52bf73768c1b22a9ac50629d1d2b08c04e7b3ac4c21b536693c149ce2c2615ee4796030e5b3e3cba
+  languageName: node
+  linkType: hard
+
+"ip-regex@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "ip-regex@npm:4.3.0"
+  checksum: 7ff904b891221b1847f3fdf3dbb3e6a8660dc39bc283f79eb7ed88f5338e1a3d1104b779bc83759159be266249c59c2160e779ee39446d79d4ed0890dfd06f08
   languageName: node
   linkType: hard
 
@@ -13563,7 +13599,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nan@npm:^2.12.1":
+"nan@npm:^2.12.1, nan@npm:^2.14.2":
   version: 2.15.0
   resolution: "nan@npm:2.15.0"
   dependencies:
@@ -13683,7 +13719,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-gyp@npm:latest":
+"node-gyp@npm:^8.0.0, node-gyp@npm:latest":
   version: 8.4.1
   resolution: "node-gyp@npm:8.4.1"
   dependencies:
@@ -13700,15 +13736,6 @@ __metadata:
   bin:
     node-gyp: bin/node-gyp.js
   checksum: 341710b5da39d3660e6a886b37e210d33f8282047405c2e62c277bcc744c7552c5b8b972ebc3a7d5c2813794e60cc48c3ebd142c46d6e0321db4db6c92dd0355
-  languageName: node
-  linkType: hard
-
-"node-html-parser@npm:^1.4.2":
-  version: 1.4.9
-  resolution: "node-html-parser@npm:1.4.9"
-  dependencies:
-    he: 1.2.0
-  checksum: fbcf5ea22f266b36a4761d448d3db7bcee6d7570e3a8ec38cbde223fe3d705cda1df8c287907520ae2d6bac8f68ef4dacdb5fd76c375c13c50bc746e980f4a91
   languageName: node
   linkType: hard
 
@@ -16642,6 +16669,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"re2@npm:^1.16.0":
+  version: 1.16.0
+  resolution: "re2@npm:1.16.0"
+  dependencies:
+    install-artifact-from-github: ^1.2.0
+    nan: ^2.14.2
+    node-gyp: ^8.0.0
+  checksum: 0d8be5b1f8ff3726a6be932bed8bc9b33239a36f707f5d14946f939e267a50a6483a52d3c7457edaf4ebb8522468ec510537dcfac49a2906ccab72c2e8c0c5b5
+  languageName: node
+  linkType: hard
+
 "react-ace@npm:^9.1.4":
   version: 9.5.0
   resolution: "react-ace@npm:9.5.0"
@@ -18723,6 +18761,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"slate-hyperscript@npm:^0.62.0":
+  version: 0.62.0
+  resolution: "slate-hyperscript@npm:0.62.0"
+  dependencies:
+    is-plain-object: ^3.0.0
+  peerDependencies:
+    slate: ">=0.55.0"
+  checksum: b87e65ddb205fdca400251c9a793ef0c29a69ed18c66948a1c4af47451fc3a2d0aa3df88808b09ade036ceca2c1189bb14abe82581ea496ff089b6db2e27076f
+  languageName: node
+  linkType: hard
+
 "slate-react-placeholder@npm:^0.2.9":
   version: 0.2.9
   resolution: "slate-react-placeholder@npm:0.2.9"
@@ -18763,6 +18812,20 @@ __metadata:
     is-plain-object: ^3.0.0
     tiny-warning: ^1.0.3
   checksum: b62d798a4180139230062a20bf948c62c16ae4963e8a5ec4ad830acb73c31396595873908a0fdc332e75921e22d79127663cb2bbedf4845c27a96081ebe7b9b0
+  languageName: node
+  linkType: hard
+
+"slate@npm:^0.63.0":
+  version: 0.63.0
+  resolution: "slate@npm:0.63.0"
+  dependencies:
+    "@types/esrever": ^0.2.0
+    esrever: ^0.2.0
+    fast-deep-equal: ^3.1.3
+    immer: ^8.0.1
+    is-plain-object: ^3.0.0
+    tiny-warning: ^1.0.3
+  checksum: e42d6e3d5a9da5ddaac2c90523a4395e372884af1cd5e3c46a7375c14847aa18d325f1e89fa7f0bfd5aec6fbf1f1684ed4f766bc078c7d1f4e344673f761a00a
   languageName: node
   linkType: hard
 
@@ -19914,6 +19977,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tlds@npm:^1.217.0":
+  version: 1.226.0
+  resolution: "tlds@npm:1.226.0"
+  bin:
+    tlds: bin.js
+  checksum: 39a58099ff2c08763f92d56051522650a1497b33c727ee868dc67ae9571f043f23d53303aa996981028a8ef8dbf69b18b29020fe7d7e0d37dffe0a2c53f26716
+  languageName: node
+  linkType: hard
+
 "tmpl@npm:1.0.5":
   version: 1.0.5
   resolution: "tmpl@npm:1.0.5"
@@ -20579,6 +20651,17 @@ __metadata:
     querystringify: ^2.1.1
     requires-port: ^1.0.0
   checksum: c6b32fff835e43f3b1b4150239f459744f0ab1a908841dbfecbfc79bf67f4d6c8d9af1841d0c6d814d45bfa08525cc29312a0bef31db7aa894306b3db07e4ee0
+  languageName: node
+  linkType: hard
+
+"url-regex-safe@npm:^2.0.2":
+  version: 2.1.0
+  resolution: "url-regex-safe@npm:2.1.0"
+  dependencies:
+    ip-regex: ^4.3.0
+    re2: ^1.16.0
+    tlds: ^1.217.0
+  checksum: 235b2d1d25b63b8041ce2947855160d977d6810da2b291655fe2d5d64fdec2659f8001f17f0fde12b5727f666ccc8b9b9b713007c8d7b33f36527499aacc4620
   languageName: node
   linkType: hard
 
