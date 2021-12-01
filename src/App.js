@@ -61,7 +61,7 @@ function App() {
             const isText = f.data_type === `text`
             const isJsonRte = f.data_type === `json` && f.field_metadata.allow_json_rte === true
 
-            return isText || isJsonRte
+            return isText // || isJsonRte
           })
           .map((f, i) => ({
             id: i,
