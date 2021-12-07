@@ -2,7 +2,6 @@
   "name": "cs-ui-ext-language-compare",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "yarn@3.1.1",
   "dependencies": {
     "@contentstack/ui-extensions-sdk": "^2.2.0",
     "@contentstack/utils": "^1.1.0",
@@ -38,8 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint-config-react-app": "^6.0.0"
   }
 }

@@ -12,7 +12,6 @@ function App() {
   const [selectedField, setSelectedField] = useState("title");
   const [entryTranslations, setEntryTranslations] = useState([]);
 
-  
   useEffect(() => {
     // eslint-disable-next-line no-restricted-globals
     if (self === top) {
@@ -91,6 +90,9 @@ function App() {
           value={selectedField}
           options={fields}
         />
+        {/* <select onChange={e => setSelectedField(JSON.parse(e.target.value))} value={selectedField}>
+          {fields.map(f => <option key={f.value} value={JSON.stringify(f)}>{f.label}</option>)}
+        </select> */}
       </div>
       {entryTranslations.map((et, i) => {
         const value = resolveValue()
