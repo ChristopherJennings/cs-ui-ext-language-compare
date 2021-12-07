@@ -12,13 +12,13 @@ function App() {
   const [selectedField, setSelectedField] = useState("title");
   const [entryTranslations, setEntryTranslations] = useState([]);
 
+  
   useEffect(() => {
     // eslint-disable-next-line no-restricted-globals
     if (self === top) {
       setError({ message: 'This extension can only be used in the Contentstack' });
     } else {
       ContentstackUIExtension.init().then(extension => {
-        console.log('Extension initialized', extension);
         setExtension(extension);
       });
     }
@@ -28,10 +28,8 @@ function App() {
     if (extension && extension.entry) {
       const getEntryTranslations = async () => {
         const locales = (await extension.stack.getLocales()).locales;
-        console.log('getEntryTranslations - locales', locales);
 
         const otherLocales = locales.filter(locale => locale.code !== extension.entry.locale)
-        console.log('getEntryTranslations - other locales', otherLocales);
 
         const entryResults = otherLocales.map(locale => {
           return {
@@ -49,13 +47,10 @@ function App() {
           entryResults[i].entry = resolvedRequest.entry
         })
 
-        console.log('getEntryTranslations - entryResults', entryResults);
-
         setEntryTranslations(entryResults)
       }
 
       const setupFields = async () => {
-        console.log('setupFields', extension);
         const entryFields = extension.entry.content_type.schema
           .filter(f => {
             const isText = f.data_type === `text`
@@ -122,7 +117,7 @@ function App() {
               if (Array.isArray(value)) {
                 return `<ul>${value.map((v, i) => `<li>${v}</li>`).join('')}</ul>`
               } else {
-                Utils.jsonToHTML({entry, paths: [selectedField.value]})
+                Utils.jsonToHTML({ entry, paths: [selectedField.value] })
                 return entry[selectedField.value]
               }
             default:
