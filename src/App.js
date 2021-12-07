@@ -9,8 +9,10 @@ function App() {
 
   const [extension, setExtension] = useState(null);
   const [fields, setFields] = useState([]);
-  const [selectedField, setSelectedField] = useState("title");
+  const [locales, setLocales] = useState([]);
+  const [selectedField, setSelectedField] = useState({id: 0, label: 'Title', value: 'title'});
   const [entryTranslations, setEntryTranslations] = useState([]);
+  const [selectedLocales, setSelectedLocales] = useState([])
 
   useEffect(() => {
     // eslint-disable-next-line no-restricted-globals
@@ -27,8 +29,10 @@ function App() {
     if (extension && extension.entry) {
       const getEntryTranslations = async () => {
         const locales = (await extension.stack.getLocales()).locales;
+        const localeSelectVals = locales.map(item => ({value:item.code,label: item.name}))
+        setLocales( localeSelectVals.filter(locale =>  locale.value !== extension.entry.locale) );
 
-        const otherLocales = locales.filter(locale => locale.code !== extension.entry.locale)
+        const otherLocales = locales.filter(locale =>  selectedLocales.some(b => locale.code === b.value) )
 
         const entryResults = otherLocales.map(locale => {
           return {
@@ -63,13 +67,13 @@ function App() {
             value: f.uid
           }));
         setFields(entryFields);
-        setSelectedField(entryFields[0]);
+        // setSelectedField(entryFields[0]);
       }
 
       setupFields();
       getEntryTranslations();
     }
-  }, [extension])
+  }, [extension,selectedLocales])
 
   if (error) {
     return <p>Error: {error.message}</p>
@@ -82,9 +86,22 @@ function App() {
   return (
     <div>
       <div style={{ borderBottom: "0.5px dashed rgba(113,128,150,.2)", marginBottom: "1.375rem", paddingBottom: "1.5625rem" }}>
-        <InstructionText>
-          Select the field to see all translations
+      <InstructionText>
+          Select the field and locales to show translations
         </InstructionText>
+        <Select
+            selectLabel="Included locales"
+            value={selectedLocales}
+            isMulti={true}
+            onChange={setSelectedLocales}
+            options={locales}
+            placeholder="Select Items"
+            isSearchable={true}
+            isClearable={true}
+            width="400px"
+            multiDisplayLimit={2} 
+      />
+
         <Select
           onChange={setSelectedField}
           value={selectedField}
